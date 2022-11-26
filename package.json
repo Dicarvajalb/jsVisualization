@@ -6,8 +6,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "antlr4": "^4.11.0",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-jsx-parser": "^1.29.0"
   }
 }
