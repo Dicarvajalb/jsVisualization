@@ -4,8 +4,12 @@ import JavaScriptLexer from "../lexer/JavaScriptLexer";
 import Listener from "./Listener";
 import Container from "../../components/container";
 export default function semanticMain (){
-    const [d,d2,d1] = [10,1,3]
-    const input = "const [d,d2,d1] = [10,1,3]"
+    const {ds,d1} = new Array
+    let varr = 10+2+3
+    if(varr > 2){
+
+    }
+    const input = "const [10,2] = [10,2] const da = [10,2] const da,db = [10,2] const {ds,d1} = 10 const {ds,d1} = new Array let varr = 10+2+3 if(varr == (1==1)){let d = 10}"
     const chars = new antlr4.InputStream(input);
     const lexer = new JavaScriptLexer(chars);
     const tokens = new antlr4.CommonTokenStream(lexer);

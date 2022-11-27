@@ -5,7 +5,7 @@ import { CONFIG_FILES } from "next/dist/shared/lib/constants";
 
 export default class Listener extends JavaScriptParserListener {
     AllComp = ""
-    
+    varr = "<"
     enterStatement(ctx){
         console.log("Statement")
         this.AllComp += "<div style={{border: 'solid 1px green'}}><div>Statement content</div>"
@@ -17,43 +17,47 @@ export default class Listener extends JavaScriptParserListener {
         console.log("let_", ctx.NonStrictLet().value)
     }
     enterIfStatement(ctx){
-        this.AllComp += "<Container colorType={4}>"
+        this.AllComp += "<div style={{border: 'solid 1px green'}}><div>if statement</div>"
     }
 
     exitIfStatement(ctx){
-        this.AllComp += "</Container>"
+        this.AllComp += "</div>"
     }
-    enterNumericLiteral(ctx){
-        this.AllComp += "<Container colorType={1}>"+ctx.getText()+"</Container>"
-    }
-    
     enterVarModifier(ctx){
         this.AllComp += "<Container colorType={4}>"+ctx.getText()+"</Container>"
     }
-    enterAssignable(ctx){
-        this.AllComp += "<Container colorType={2}>"+ctx.getText()+"</Container>"
-    }
+    
     enterVariableStatement(ctx){
         console.log("var")
     }
     enterSingleExpression(ctx){
         console.log("single")
     }
+    enterNumericLiteral(ctx){
+        this.AllComp += "<Container colorType={1}>"+ctx.getText()+"</Container>"
+    }
+    enterIdentifier(ctx){
+        this.AllComp += "<Container colorType={1}>"+ctx.getText()+"</Container>"
+    }
+    enterKeyword(ctx){
+        this.AllComp += "<Container colorType={3}>"+ctx.getText()+"</Container>"
+    }
     visitTerminal(node){
         console.log("terminales", node.getText())
-        if (node.getText() === "="){
-            this.AllComp += "<Container colorType={1}>=</Container>"
+        if (node.getText() === "=" || node.getText() === "," || node.getText() === "[" || node.getText() === "]"|| node.getText() === ":"|| node.getText() === ")"|| node.getText() === "("
+        || node.getText() == "{" || node.getText() == "}"
+        || node.getText() === "+"|| node.getText() === "-"|| node.getText() === "%"|| node.getText() === "/"|| node.getText() === "*"
+        || node.getText() === ">" || node.getText() === "<" || node.getText() === ">=" || node.getText() === "<=" || node.getText() === "=="
+        ){
+            this.AllComp += "<Container colorType={7}>"+"{"+'"'+node.getText()+'"'+"}"+"</Container>"
             
         }
-       
-        if (node.getText() == "let"){
-            //this.AllComp += "<Container colorType={4}>let</Container>"
-            
+        else if(node.getText() === "<"|| node.getText() === ">"){
+            this.AllComp += "<Container colorType={8}>"+"brb"+"</Container>"
         }
-        else if (node.getText == "if"){
-            AllComp += "<h1>if</h1>"
-        
-    }
+        else if(node.getText() === "new"|| node.getText() === "if"){
+            this.AllComp += "<Container colorType={8}>"+node.getText()+"</Container>"
+        }
     }
     enterKeyword(ctx){
         console.log("keyword", ctx)
