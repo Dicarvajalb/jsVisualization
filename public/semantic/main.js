@@ -4,7 +4,8 @@ import JavaScriptLexer from "../lexer/JavaScriptLexer";
 import Listener from "./Listener";
 import Container from "../../components/container";
 export default function semanticMain (){
-    const input = "let id = 10"
+    const [d,d2,d1] = [10,1,3]
+    const input = "const [d,d2,d1] = [10,1,3]"
     const chars = new antlr4.InputStream(input);
     const lexer = new JavaScriptLexer(chars);
     const tokens = new antlr4.CommonTokenStream(lexer);
