@@ -10,12 +10,12 @@ import {
 import semanticMain from '../public/semantic/main';
 import JsxParser from 'react-jsx-parser';
 import Container from '../components/Container';
+import Collapsible from '../components/Collapsible';
 import {useState} from 'react';
 
 export default Visualize;
 
-function Visualize() {
-	
+function Visualize() {	
 
 	let [message, setMessage] = useState('');
 
@@ -76,6 +76,7 @@ function Visualize() {
 								<h1 className={styles.title}>
         						  <JsxParser components={{Container}} jsx={Comp}/>
 								  <Container colorType={4}>'hd'</Container>
+								  <Collapsible statementType='if' holeStatement='holaaaa'></Collapsible>
         						</h1>
 							</div>
 							{/* <div>

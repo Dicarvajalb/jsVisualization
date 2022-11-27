@@ -1,0 +1,21 @@
+import React from 'react';
+import useCollapse from 'react-collapsed';
+import '../styles/collapsible.module.css'
+function Collapsible(props) {
+    const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+return (
+    <div className="collapsible">
+        <div className="header" {...getToggleProps()}>
+            {isExpanded ? 'Collapse' : props.statementType}
+        </div>
+        <div {...getCollapseProps()}>
+            <div className="content">
+                {props.holeStatement} <br/><br/>
+                Click again to hide...
+            </div>
+        </div>
+    </div>
+    );
+}
+
+export default Collapsible
