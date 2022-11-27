@@ -1,12 +1,11 @@
 import JavaScriptParserListener from "../parser/JavaScriptParserListener";
-import Container from "./components/container";
+import Container from "../../components/container";
 
 
 export default class Listener extends JavaScriptParserListener {
     AllComp = '<Container>Hi d</Container>'
     
     enterStatement(ctx){
-        
     }
     enterVarModifier(ctx){
         //this.AllComp = <this.AllComp><p>Estuve en una var modifier</p></this.AllComp>
@@ -17,13 +16,19 @@ export default class Listener extends JavaScriptParserListener {
         console.log("let_", ctx.NonStrictLet().value)
     }
     visitTerminal(node){
-        if (node.getText == "let"){
-            this.AllComp.append("<BlueLetComp>let</BlueLetComp>")
+        console.log("terminales", node.getText())
+        if (node.getText() == "let"){
+            this.AllComp = "<Container colorType={4}>lete</Container>"
+            console.log("terminal", this.AllComp)
+        }
+        else if (node.getText == "var"){
+            AllComp = "<Container colorType={2}>var</Container>"
         }
         
     }
     enterKeyword(ctx){
         console.log("keyword", ctx)
+
     }
     
 }

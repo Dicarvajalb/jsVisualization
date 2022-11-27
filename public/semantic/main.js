@@ -2,7 +2,7 @@ import antlr4 from "antlr4";
 import JavaScriptParser from "../parser/JavaScriptParser";
 import JavaScriptLexer from "../lexer/JavaScriptLexer";
 import Listener from "./Listener";
-import Container from "./components/container";
+import Container from "../../components/container";
 export default function semanticMain (){
     const input = "let id = 10"
     const chars = new antlr4.InputStream(input);

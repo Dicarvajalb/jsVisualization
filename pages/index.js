@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css';
 import semanticMain from '../public/semantic/main';
 import JsxParser from 'react-jsx-parser';
-import Container from '../public/semantic/components/container';
+import Container from '../components/container';
 export default function Home() {
   const Comp = semanticMain()
   console.log("index", Comp)
