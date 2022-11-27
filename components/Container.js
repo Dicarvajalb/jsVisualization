@@ -13,8 +13,7 @@ const Container = ({children, colorType}) =>{
         9:"#fffffcff"
     }
 return(
-    <div style={{border:"1px solid black", width:"100px", height:"100px", backgroundColor:colors[colorType?colorType:0]}}>{children}</div>
-
+    <span style={{border:"1px solid black", width:"100px", height:"100px", backgroundColor:colors[colorType?colorType:0]}}>{children}</span>
 )
 
 }
