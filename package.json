@@ -13,6 +13,7 @@
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-jsx-parser": "^1.29.0"
+    "react-jsx-parser": "^1.29.0",
+    "semantic-ui-react": "^2.1.4"
   }
 }
