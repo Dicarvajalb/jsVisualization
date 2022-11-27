@@ -4,18 +4,18 @@ import semanticMain from '../public/semantic/main';
 import JsxParser from 'react-jsx-parser';
 import Container from '../components/Container';
 import Visualize from './visualize';
-export default function Home() {
-  const Comp = semanticMain()
-  console.log("index", Comp)
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-		</Head>
-	</div>
-  )
-}
+//export default function Home() {
+//  const Comp = semanticMain()
+//  console.log("index", Comp)
+//  return (
+//    <div className={styles.container}>
+//      <Head>
+//        <title>Create Next App</title>
+//        <link rel="icon" href="/favicon.ico" />
+//		</Head>
+//	</div>
+//  )
+//}
 		
 
 export default function Root(){

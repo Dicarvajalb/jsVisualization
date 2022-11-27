@@ -62,6 +62,5 @@ export default class Listener extends JavaScriptParserListener {
     enterKeyword(ctx){
         console.log("keyword", ctx)
 
-    }
-    
+    }    
 }

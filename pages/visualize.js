@@ -7,10 +7,33 @@ import {
     Button,
     Icon
 } from 'semantic-ui-react';
+import semanticMain from '../public/semantic/main';
+import JsxParser from 'react-jsx-parser';
+import Container from '../components/Container';
+import {useState} from 'react';
 
 export default Visualize;
 
 function Visualize() {
+	
+
+	let [message, setMessage] = useState('');
+
+	let [Comp, setComp] = useState('');	
+
+	const handleClick = event => {
+/*  */
+		console.log(event.target.value);
+		setComp(semanticMain(event.target.value))
+		//Comp = semanticMain(event.target.value)
+		console.log(Comp);
+	  };
+
+	  const handleMessageChange = event => {
+		setMessage(event.target.value);
+
+	  };
+
   return (
     <>
 <div className={styles["app-whole"]}>
@@ -28,28 +51,42 @@ function Visualize() {
 						<div className={styles["visualizer"]}>
 							<div>
 								<Form.Field
+        							id="message"
+        							name="message"
+        							value={message}
                             		control={TextArea}
                             		placeholder='    Your code here..'
+									onChange={handleMessageChange}
 									className={styles["visualizerInput"]}
                         		/>
-							</div>
+							</div> 
 							
 							<div>
 								<Button
+								onClick={handleClick}
                             	color="orange"
                             	size="large"
+								value={message}
 								className={styles["button-21"]}
                         		>
                             	<Icon name='translate' />
                             	⥂</Button>
 							</div>
 							<div>
+								<h1 className={styles.title}>
+        						  <JsxParser components={{Container}} jsx={Comp}/>
+								  <Container colorType={4}>'hd'</Container>
+        						</h1>
+							</div>
+							{/* <div>
 								<Form.Field
                             		control={TextArea}
                             		placeholder='   '
+									value={message}
 									className={styles["visualizerOutput"]}
                         		/>
-							</div>
+								{Comp}
+							</div> */}
 						</div>
 
                         {/* <select className={styles["language-select"]}>
@@ -57,9 +94,13 @@ function Visualize() {
                         </select> */}
 
                     </Form>
+
+
                 </div>
             </div>
 			</div>
+
+
     </>
   )
 }
