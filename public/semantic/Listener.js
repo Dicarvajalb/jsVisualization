@@ -8,7 +8,7 @@ export default class Listener extends JavaScriptParserListener {
     varr = "<"
     enterStatement(ctx){
         console.log("Statement")
-        this.AllComp += "<div style={{border: 'solid 1px green'}}>"
+        this.AllComp += "<div >"
     }
     exitStatement(ctx){
         this.AllComp += "</div>"

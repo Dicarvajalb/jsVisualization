@@ -1,8 +1,12 @@
-.collapsible .content {
+.content {
     padding: 6px;
-    background-color: #eeeeee;
+    background-color: transparent;
+    border-left: 1em solid rgba(142, 68, 68, 0.128);
+    height: fit-content;
+    width: fit-content;
+
 }
-.collapsible .header {
+.header {
     background-color: #dddddd;
     padding: 6px;
     cursor: pointer;

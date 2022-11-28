@@ -1,0 +1,10 @@
+.container{
+    margin: 2px 0;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+}
+.container p{
+display:  inline-block;
+margin: 0
+}

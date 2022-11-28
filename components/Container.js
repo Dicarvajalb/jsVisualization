@@ -1,4 +1,4 @@
-
+import styles from "../styles/container.module.css"
 const Container = ({children, colorType}) =>{
     const colors = {
         1:"#ffadadff",
@@ -12,7 +12,8 @@ const Container = ({children, colorType}) =>{
         9:"#fffffcff"
     }
 return(
-    <span style={{display:"inline",border:"1px solid black", width:"100px", height:"100px", backgroundColor:colors[colorType?colorType:0]}}>{children}</span>
+    <span className={styles["container"]} >
+        <p style={{padding: "0.1em",border:"1px solid black", backgroundColor:colors[colorType?colorType:0]}} >{children}</p></span>
 )
 
 }

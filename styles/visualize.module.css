@@ -71,7 +71,7 @@
 	padding: 20px;
 	width: 1000px;
 	margin: 0 auto;
-	text-align: center;
+	/*text-align: center;*/
 	background-color: #8AB6F9;
 	border-radius: 25px;
   }
@@ -92,15 +92,17 @@
   .visualizerInput textarea{
 	width: 400px;
 	min-height: 400px;
-	border-radius: 25px;
+	max-height: 400px;
+	border-radius: 8px;
+	background-color: black;
+	color: #FFFFFF;
   }
-
   
-
-  .visualizerOutput textarea{
+  .visualizerOutput{
 	width: 400px;
 	min-height: 400px;
-	border-radius: 25px;
+	max-height: 400px;
+	overflow: scroll;
   }
 
   .visualizerButton{
