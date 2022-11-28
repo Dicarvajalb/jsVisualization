@@ -19,7 +19,7 @@ export default Visualize;
 
 function Visualize() {	
 
-	let [message, setMessage] = useState('');
+	let [message, setMessage] = useState('var fib = function(n) { \n const map = new Map(); // creamos un mapa para guardar los valores \n const dp = (x) => { \n if (x <= 1) return x; \n if (!map.has(x)) { // si NO hemos calculado el resultado\nmap.set(x, dp(x-1) + dp(x-2)) // lo calculamos y guardamos el valor}\neturn map.get(x);}\nreturn dp(n);};');
 
 	let [Comp, setComp] = useState('');	
 
@@ -67,9 +67,10 @@ function Visualize() {
         							name="message"
         							value={message}
                             		control={TextArea}
-                            		placeholder='    Your code here..'
+                            		placeholder='Your code here..'
 									onChange={handleMessageChange}
 									className={styles["visualizerInput"]}
+									
                         		/>
 							</div> 
 							
