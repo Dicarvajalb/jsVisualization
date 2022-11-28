@@ -1,4 +1,4 @@
-# Next.js Instalation
+# Next.js Installation
 
 Start the comand line
 ```sh
