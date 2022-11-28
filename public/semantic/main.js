@@ -2,7 +2,6 @@ import antlr4 from "antlr4";
 import JavaScriptParser from "../parser/JavaScriptParser";
 import JavaScriptLexer from "../lexer/JavaScriptLexer";
 import Listener from "./Listener";
-import Container from "../../components/container";
 export default function semanticMain (input){
     const {ds,d1} = new Array
     let varr = 10+2+3
