@@ -74,9 +74,8 @@ function Visualize() {
 							</div>
 							<div>
 								<h1 className={styles.title}>
-        						  <JsxParser components={{Container}} jsx={Comp}/>
-								  <Container colorType={4}>'hd'</Container>
-								  <Collapsible statementType='if' holeStatement='holaaaa'></Collapsible>
+        						  <JsxParser components={{Container, Collapsible}} jsx={Comp}/>
+				
         						</h1>
 							</div>
 							{/* <div>
