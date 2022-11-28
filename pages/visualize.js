@@ -72,11 +72,9 @@ function Visualize() {
                             	<Icon name='translate' />
                             	⥂</Button>
 							</div>
-							<div>
+							<div className={styles["visualizerOutput"]}>
 								<h1 className={styles.title}>
         						  <JsxParser components={{Container}} jsx={Comp}/>
-								  <Container colorType={4}>'hd'</Container>
-								  <Collapsible statementType='if' holeStatement='holaaaa'></Collapsible>
         						</h1>
 							</div>
 							{/* <div>

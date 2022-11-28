@@ -6,12 +6,11 @@ function Collapsible(props) {
 return (
     <div className="collapsible">
         <div className="header" {...getToggleProps()}>
-            {isExpanded ? 'Collapse' : props.statementType}
+            {isExpanded ? '↑' : '↓'}
         </div>
         <div {...getCollapseProps()}>
             <div className="content">
                 {props.holeStatement} <br/><br/>
-                Click again to hide...
             </div>
         </div>
     </div>

@@ -92,15 +92,17 @@
   .visualizerInput textarea{
 	width: 400px;
 	min-height: 400px;
-	border-radius: 25px;
+	max-height: 400px;
+	border-radius: 8px;
+	background-color: black;
+	color: #FFFFFF;
   }
-
   
-
-  .visualizerOutput textarea{
+  .visualizerOutput{
 	width: 400px;
 	min-height: 400px;
-	border-radius: 25px;
+	max-height: 400px;
+	overflow: scroll;
   }
 
   .visualizerButton{
