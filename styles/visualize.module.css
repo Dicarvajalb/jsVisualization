@@ -1,0 +1,154 @@
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: auto;
+	text-align: center;
+  }
+  
+  .form-signin .checkbox {
+	font-weight: 400;
+  }
+  
+  .form-signin .form-floating:focus-within {
+	z-index: 2;
+  }
+  
+  .form-signin input[type="code"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="visualize"] {
+	margin-bottom: 0px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	text-align: right;
+  }
+
+  .alignleft {
+	float: left;
+	width: 33.33333%;
+	text-align: left;
+  }
+  .aligncenter {
+	float: left;
+	width: 33.33333%;
+	text-align: center;
+  }
+  .alignright {
+   float: left;
+   width: 33.33333%;
+   text-align: right;
+  }
+
+  .app-header{
+	margin-top: 20px;
+	text-align: center;
+	padding: 20px;
+	/* background-color: #CADCFC; */
+	background-color: #00246B;
+	width: 1000px;
+	border-radius: 25px;
+	align-self: center;
+	text-align: center;
+	margin: 0 auto;
+  }
+  
+  .header{
+	font-family: 'Azeret Mono', monospace;
+	font-size: 30px;
+	
+  }
+
+  .app-body{
+	margin: 20 auto;
+	align-self: center;
+  }
+  
+  .app-body{
+	padding: 20px;
+	width: 1000px;
+	margin: 0 auto;
+	/*text-align: center;*/
+	background-color: #8AB6F9;
+	border-radius: 25px;
+  }
+  
+  .language-select{
+	height: 40px !important;
+	margin-bottom: 15px;
+	outline: none !important;
+  }
+
+  .visualizer{
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 10px;
+	justify-content: center;
+  }
+
+  .visualizerInput textarea{
+	width: 400px;
+	min-height: 400px;
+	max-height: 400px;
+	border-radius: 8px;
+	background-color: black;
+	color: #FFFFFF;
+  }
+  
+  .visualizerOutput{
+	width: 400px;
+	min-height: 400px;
+	max-height: 400px;
+	overflow: scroll;
+  }
+
+  .visualizerButton{
+	align-self: center;
+	display: grid;
+  }
+
+.button-21 {
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-21:active,
+.button-21:focus {
+  outline: none;
+}
+
+.button-21:hover {
+  background-position: -20px -20px;
+}
+
+.button-21:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
