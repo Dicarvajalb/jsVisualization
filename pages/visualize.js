@@ -37,10 +37,9 @@ function Visualize() {
   return (
     <>
 <div className={styles["app-whole"]}>
+
 			<div className={styles["app-header"]}>
-				<head>
-					<title>Visualizer</title>
-				</head>
+				
                 <h2 className="header"> <font color='white'>Please enter your Javascript code to visualize</font></h2>
             </div>
 
@@ -72,10 +71,10 @@ function Visualize() {
                             	<Icon name='translate' />
                             	⥂</Button>
 							</div>
-							<div className={styles["visualizerOutput"]}>
+							<div>
 								<h1 className={styles.title}>
         						  <JsxParser components={{Container, Collapsible}} jsx={Comp}/>
-				
+								  
         						</h1>
 							</div>
 							{/* <div>
