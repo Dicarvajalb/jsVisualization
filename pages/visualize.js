@@ -12,6 +12,8 @@ import JsxParser from 'react-jsx-parser';
 import Container from '../components/Container';
 import Collapsible from '../components/Collapsible';
 import {useState} from 'react';
+import Image from 'next/image'
+import mypic from '../styles/js2.png'
 
 export default Visualize;
 
@@ -37,10 +39,23 @@ function Visualize() {
   return (
     <>
 <div className={styles["app-whole"]}>
-
+	
 			<div className={styles["app-header"]}>
-				
-                <h2 className="header"> <font color='white'>Please enter your Javascript code to visualize</font></h2>
+				<head>
+					<title>Visualizer</title>
+				</head>
+				<Image
+    			  src={mypic}
+    			  alt="Picture of the author"
+    			  width="50px"
+    			  height="10px"
+				  className={styles["app-image"]}
+    			/>
+                <h2 className="header"> <font color='black'>Visual.js</font></h2>
+            </div>
+			<div className={styles["app-useful"]}></div>
+			<div className={styles["app-title"]}>
+                <h2 className="header"> <font color='black'>Insert your JavaScript code</font></h2>
             </div>
 
             <div className={styles['app-body']}>
@@ -71,10 +86,9 @@ function Visualize() {
                             	<Icon name='translate' />
                             	⥂</Button>
 							</div>
-							<div>
+							<div className={styles["visualizerOutput"]}>
 								<h1 className={styles.title}>
-        						  <JsxParser components={{Container, Collapsible}} jsx={Comp}/>
-								  
+        						  <JsxParser components={{Container}} jsx={Comp}/>
         						</h1>
 							</div>
 							{/* <div>
