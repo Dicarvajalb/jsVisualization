@@ -1,7 +1,4 @@
 import JavaScriptParserListener from "../parser/JavaScriptParserListener";
-import Container from "../../components/container";
-import { CONFIG_FILES } from "next/dist/shared/lib/constants";
-
 
 export default class Listener extends JavaScriptParserListener {
     AllComp = ""
