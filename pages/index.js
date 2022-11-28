@@ -21,6 +21,9 @@ import Visualize from './visualize';
 export default function Root(){
     return(
         <>
+                <head>
+					<title>Visualizer</title>
+				</head>
             <Visualize></Visualize>
         </>
     )

@@ -13,7 +13,7 @@ const Container = ({children, colorType}) =>{
     }
 return(
     <span className={styles["container"]} >
-        <p style={{padding: "0.1em",border:"1px solid black", backgroundColor:colors[colorType?colorType:0]}} >{children}</p></span>
+        <p style={{fontWeight:"bold", fontSize:"20px", padding: "0.1em", backgroundColor:colors[colorType?colorType:0]}} >{children}</p></span>
 )
 
 }

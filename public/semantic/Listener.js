@@ -14,7 +14,7 @@ export default class Listener extends JavaScriptParserListener {
         console.log("let_", ctx.NonStrictLet().value)
     }
     enterIfStatement(ctx){
-        this.AllComp += "<div style={{border: 'solid 1px green'}}>"
+        this.AllComp += "<div>"
     }
 
     exitIfStatement(ctx){
@@ -88,7 +88,7 @@ export default class Listener extends JavaScriptParserListener {
         else if(node.getText() === "this"){
             this.AllComp += "<Container colorType={6}>"+node.getText()+"</Container>"
         }
-        else if(node.getText() === "if" || node.getText() === "for" || node.getText() === "while"|| node.getText() === "do"){
+        else if(node.getText() === "if" || node.getText() === "for" || node.getText() === "while"|| node.getText() === "do"|| node.getText() === "else"){
             this.AllComp += "<Container colorType={5}>"+node.getText()+"</Container>"
         }
     }

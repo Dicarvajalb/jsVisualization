@@ -41,9 +41,7 @@ function Visualize() {
 <div className={styles["app-whole"]}>
 	
 			<div className={styles["app-header"]}>
-				<head>
-					<title>Visualizer</title>
-				</head>
+				
 				<Image
     			  src={mypic}
     			  alt="Picture of the author"
@@ -88,7 +86,7 @@ function Visualize() {
 							</div>
 							<div className={styles["visualizerOutput"]}>
 								<h1 className={styles.title}>
-        						  <JsxParser components={{Container}} jsx={Comp}/>
+        						  <JsxParser components={{Container, Collapsible}} jsx={Comp}/>
         						</h1>
 							</div>
 							{/* <div>

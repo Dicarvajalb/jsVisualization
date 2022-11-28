@@ -6,7 +6,7 @@ function Collapsible(props) {
 return (
     <div className={styles["collapsible"]}>
         <div className="header" {...getToggleProps()}>
-            {isExpanded ? '¡' : props.statementType}
+            {isExpanded ? '▼' : '▲'}
         </div>
         <div {...getCollapseProps()}>
             <div className={styles["content"]}>
