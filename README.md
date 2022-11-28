@@ -18,4 +18,4 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 
 # About us
 
-This is a visual software, fto read more about it [click here.](https://docs.google.com/presentation/d/157JooQnbWfrww5vXJZSsTSjcRJhfn_jDr9xlA8Kccy4/edit?usp=sharing) 
+This is a visual software, for read more about it [click here.](https://docs.google.com/presentation/d/157JooQnbWfrww5vXJZSsTSjcRJhfn_jDr9xlA8Kccy4/edit?usp=sharing) 
